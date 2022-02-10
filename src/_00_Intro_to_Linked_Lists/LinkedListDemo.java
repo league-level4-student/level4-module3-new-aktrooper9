@@ -1,5 +1,7 @@
 package _00_Intro_to_Linked_Lists;
 
+import java.util.ArrayList;
+
 public class LinkedListDemo {
 
     public static void main(String[] args) {
@@ -31,7 +33,25 @@ public class LinkedListDemo {
          * String nodes.
          * 
          */
-
+    	LinkedList<Double> list = new LinkedList<Double>();
+list.add(1.2);
+list.add(1.4);
+list.add(1.5);
+list.add(1.3);
+list.print();
+//list.remove(2);
+list.print();
+Node<Double> node=list.getHead();
+while(node!=list.getTail()) {
+	double num= node.getValue();
+	num=num*3;
+	node.setValue(num);
+	node=node.getNext();
+}
+double num= node.getValue();
+num=num*3;
+node.setValue(num);
+list.print();
     }
 
 }
